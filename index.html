@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Jogo da velha</h1>
+    </header>
+    <div class="tabuleiro">
+        <div>
+            <div id="0" class="casa"></div>
+            <div id="1" class="casa"></div>
+            <div id="2" class="casa"></div>
+        </div>
+        <div>
+            <div id="3" class="casa"></div>
+            <div id="4" class="casa"></div>
+            <div id="5" class="casa"></div>
+        </div>
+        <div>
+            <div id="6" class="casa"></div>
+            <div id="7" class="casa"></div>
+            <div id="8" class="casa"></div>
+        </div>
+    </div>
+    <input type="button" value="Limpar tabuleiro" onclick="zeraPlaca()">
+    <section>
+        <div id="resultado"></div>
+        <div id="placar">
+            <h2>Placar</h2>
+            <div id="jogadores">
+                <div id="jogadorX" class="item">jogador &#x2b55
+                    <div id="res0"></div>
+                </div>
+                <div id="jogadorO" class="item">jogador &#x274c
+                    <div id="res1"></div>
+                </div>
+            </div>
+        </div>
+    </section>   
+<script src="interface.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
