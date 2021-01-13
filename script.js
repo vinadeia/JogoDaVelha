@@ -38,6 +38,13 @@ function usuarioJoga(event){
 
     const posicao = event.target.id
 
+    if(placa[posicao] != ''){
+        alert('casa ocupada, tente outra jogada.')
+        tempJogo = 1
+    }else{
+        tempJogo = 0
+    }
+    
     if(tempJogo == 0){
 
         if(placa[posicao] == ''){
@@ -47,11 +54,11 @@ function usuarioJoga(event){
         atualizaCasa()
     
         if(verificarFinalJogo()){
-            setTimeout(() => alert('acabou o jogador ' +'\u{274c}'+' venceu') , 300)
+            setTimeout(() => alert('acabou o jogador ' +'\u{274c}'+' venceu') , 300) 
+        
         } else {
-
-            setTimeout(()=> cpuJoga(),300)   
-    
+            setTimeout(()=> cpuJoga(),300)  
+        
         }
 
         tempJogo = 1
@@ -88,6 +95,7 @@ function cpuJoga(){
 
 function verificarFinalJogo(){
 
+    
     for (let i= 0; i< estadosVitoria.length; i++){
 
         let seq = estadosVitoria[i]
@@ -105,7 +113,7 @@ function verificarFinalJogo(){
         }   
         
     }
-    
+
     return false
 }
 
@@ -114,16 +122,16 @@ function atualizaPlacar(){
 
     switch(tempJogo){
 
-        case 0:
-            
+        case 0:        
             pO++
             res1.innerHTML = 'venceu '+ pO
-        break;
+        
+            break;
         case 1:
-
             pX++
             res0.innerHTML = 'venceu '+ pX
-        break;
+        
+            break;
     }
 
 }
